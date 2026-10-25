@@ -7,295 +7,268 @@
 <meta name="description" content="Shahdat Hossain, Assistant Merchandiser in Bangladesh. Woven and knit garments, costing, trims sourcing and shipment coordination for USA, Canada, Germany and Netherlands buyers.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  color-scheme:dark;
-  --bg:#0a0b0f; --panel:#14161d; --panel2:#1b1e27; --ink:#efece4; --muted:#9a9ca6;
-  --gold:#e8b94a; --gold-soft:rgba(232,185,74,.14); --line:#262a35;
-  --head:"Sora","Segoe UI",Arial,sans-serif; --body:"DM Sans","Segoe UI",Arial,sans-serif;
+  --navy:#13233f; --navy2:#1c3257; --steel:#2f6fa8; --paper:#f3f5f8; --white:#fff;
+  --ink:#1d2433; --muted:#5d6678; --line:#d8dde6;
+  --head:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --body:"Source Sans 3","Segoe UI",Arial,sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body);
-  background-image:radial-gradient(700px 400px at 85% -5%,rgba(232,185,74,.10),transparent 70%)}
-a{color:inherit}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body)}
+a{color:var(--steel)}
 p{margin:0}
-h1,h2,h3{font-family:var(--head);margin:0;line-height:1.15}
-:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--head);margin:0;line-height:1.2}
+:focus-visible{outline:3px solid var(--steel);outline-offset:2px}
 
-nav{position:sticky;top:0;z-index:10;background:rgba(10,11,15,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;gap:26px;height:60px;overflow-x:auto;white-space:nowrap}
-nav b{font:800 18px var(--head);margin-right:auto;color:var(--gold)}
-nav a{text-decoration:none;color:var(--muted);font-size:15px}
-nav a:hover{color:var(--ink)}
-nav a.cta{color:#111;background:var(--gold);padding:7px 16px;border-radius:999px;font-weight:600}
+.layout{display:grid;grid-template-columns:320px 1fr;min-height:100vh;max-width:1280px;margin:0 auto;background:var(--white);box-shadow:0 0 0 1px var(--line)}
 
-/* hero */
-.hero{padding:80px 0 64px}
-.hero .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:center}
-.hero .hi{color:var(--gold);font-weight:500;margin-bottom:14px}
-.hero h1{font-size:clamp(46px,8.5vw,92px);font-weight:800;letter-spacing:-.03em}
-.hero h2{font:600 clamp(20px,3vw,28px) var(--head);color:var(--muted);margin:14px 0 24px}
-.lead{max-width:56ch;color:#c7c5bf}
-.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.btn{display:inline-block;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;border:1.5px solid var(--gold);background:var(--gold);color:#111}
-.btn.ghost{background:transparent;color:var(--ink);border-color:#3a3f4d}
-.btn:hover{filter:brightness(1.1)}
-.btn.ghost:hover{border-color:var(--gold);filter:none}
+/* sidebar */
+aside{background:var(--navy);color:#e8edf5;padding:40px 28px;position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto}
+.photo{width:150px;height:150px;border-radius:50%;margin:0 auto 20px;overflow:hidden;border:4px solid var(--navy2);background:var(--navy2);display:grid;place-items:center;font:700 44px var(--head);color:#fff}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+aside h1{font-size:25px;text-align:center;color:#fff}
+.role{text-align:center;color:#aebbd0;margin:6px 0 26px;font-size:16px}
+aside h2{font:600 13px var(--body);letter-spacing:.08em;text-transform:uppercase;color:#aebbd0;border-bottom:1px solid var(--navy2);padding-bottom:6px;margin:26px 0 12px}
+aside ul{list-style:none;margin:0;padding:0;font-size:15.5px}
+aside li{margin-bottom:9px;overflow-wrap:anywhere}
+aside a{color:#fff;text-decoration:none}
+aside a:hover{text-decoration:underline}
+aside small{display:block;color:#aebbd0;font-size:13.5px}
+.dl{display:block;text-align:center;margin-top:26px;padding:11px;border-radius:4px;background:var(--steel);color:#fff;font-weight:600;text-decoration:none}
+.dl:hover{background:#3a7cb9;text-decoration:none}
 
-.portrait{position:relative;width:min(100%,340px);margin-left:auto}
-.portrait::before{content:"";position:absolute;inset:-14px;border:1.5px solid var(--gold);border-radius:28px;transform:rotate(4deg);opacity:.7}
-.portrait .ph{position:relative;aspect-ratio:1;border-radius:24px;overflow:hidden;background:var(--panel2);display:grid;place-items:center;font:800 64px var(--head);color:var(--gold)}
-.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+/* main */
+main{padding:0 48px 48px}
+.topbar{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);display:flex;gap:26px;padding:16px 0;margin:0 -48px 0;padding-left:48px;padding-right:48px;overflow-x:auto;white-space:nowrap}
+.topbar a{text-decoration:none;color:var(--muted);font-weight:600;font-size:15px}
+.topbar a:hover{color:var(--navy)}
+section{padding:40px 0 8px;scroll-margin-top:50px}
+section+section{border-top:1px solid var(--line);margin-top:32px}
+section>h2{font-size:27px;color:var(--navy);margin-bottom:22px;padding-left:14px;border-left:5px solid var(--steel)}
+.lead{font-size:18px;color:#2c3547;max-width:68ch}
 
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:56px}
-.stat{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 22px}
-.stat b{display:block;font:800 30px var(--head);color:var(--gold)}
-.stat span{color:var(--muted);font-size:15px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:0;margin-top:28px;border:1px solid var(--line);border-radius:6px}
+.fact{padding:16px 18px;border-right:1px solid var(--line)}
+.fact:last-child{border-right:0}
+.fact b{display:block;font:700 22px var(--head);color:var(--navy)}
+.fact span{font-size:14.5px;color:var(--muted)}
 
-/* sections */
-section{padding:64px 0}
-.sh{display:flex;align-items:baseline;gap:16px;margin-bottom:32px}
-.sh h2{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.02em}
-.sh::after{content:"";flex:1;height:1px;background:var(--line)}
+.job{display:grid;grid-template-columns:150px 1fr;gap:6px 24px;padding-bottom:26px}
+.job time{font-weight:600;color:var(--steel);font-size:15px}
+.job h3{font-size:19px;color:var(--navy)}
+.co{color:var(--muted);margin-bottom:8px}
+ul.b{margin:0;padding-left:20px}
+ul.b li{margin-bottom:5px}
 
-.tl{display:grid;gap:18px}
-.job{display:grid;grid-template-columns:180px 1fr;gap:28px;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px}
-.job.now{border-color:var(--gold);background:linear-gradient(180deg,var(--gold-soft),var(--panel) 60%)}
-.job time{color:var(--gold);font-weight:600;font-size:15px}
-.job h3{font-size:21px}
-.co{color:var(--muted);margin:2px 0 12px}
-ul{margin:0;padding-left:20px}
-li{margin-bottom:6px}
-li::marker{color:var(--gold)}
+table{width:100%;border-collapse:collapse;font-size:15.5px}
+th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
+th{background:var(--paper);color:var(--navy);font-weight:600;font-size:14.5px}
+td:first-child{font-weight:600;color:var(--navy);white-space:nowrap}
+td small{display:block;color:var(--muted);font-weight:400;font-size:14px}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:6px}
 
-.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px;grid-column:span 2}
-.card.w3{grid-column:span 3}
-.card.w6{grid-column:span 6;background:linear-gradient(135deg,var(--gold-soft),var(--panel) 55%);border-color:#4a3d1c}
-.card h3{font-size:20px}
-.where{color:var(--gold);font-size:14.5px;font-weight:500;margin:3px 0 12px}
-.card p+p{margin-top:8px}
-.card .k{font-weight:600}
-.card p{color:#c7c5bf;font-size:16px}
-
-.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
-.chips li{margin:0;background:var(--panel2);border:1px solid var(--line);border-radius:999px;padding:5px 14px;font-size:15px}
-.cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.box{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px}
-.box h3{font-size:19px;margin-bottom:16px}
-.box+.box{margin-top:0}
-.edu{margin-bottom:16px}
-.edu b{display:block}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+h3.sub{font-size:18px;color:var(--navy);margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:7px;list-style:none;margin:0;padding:0}
+.tags li{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:4px 11px;font-size:15px}
+.edu{margin-bottom:14px}
+.edu b{display:block;color:var(--navy)}
 .edu span{color:var(--muted);font-size:15px}
 
-footer{padding:72px 0 48px;text-align:center;border-top:1px solid var(--line);background:radial-gradient(600px 300px at 50% 0,rgba(232,185,74,.10),transparent 70%)}
-footer h2{font-size:clamp(32px,6vw,56px);font-weight:800;letter-spacing:-.02em}
-footer p{color:var(--muted);margin:14px auto 0;max-width:52ch}
-footer .btns{justify-content:center}
-footer small{display:block;margin-top:40px;color:var(--muted)}
+.contact{background:var(--navy);color:#fff;border-radius:6px;padding:26px 28px;margin-top:40px}
+.contact h2{font-size:24px;margin-bottom:8px;border:0;padding:0;color:#fff}
+.contact p{color:#c8d3e4}
+.contact a{color:#fff;font-weight:600}
+footer{margin-top:28px;color:var(--muted);font-size:14px}
 
-@media (prefers-reduced-motion:no-preference){
-  .hero .wrap>*{animation:in .7s ease both}
-  .hero .wrap>*:nth-child(2){animation-delay:.12s}
-  @keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr}
+  aside{position:static;height:auto}
+  main{padding:0 22px 40px}
+  .topbar{margin:0 -22px;padding-left:22px;padding-right:22px}
+  .cols{grid-template-columns:1fr}
+  .job{grid-template-columns:1fr}
+  .fact{border-right:0;border-bottom:1px solid var(--line)}
+  .fact:last-child{border-bottom:0}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-@media (max-width:820px){
-  .hero .wrap,.cols{grid-template-columns:1fr}
-  .portrait{margin:10px auto 0;width:min(78%,300px)}
-  .job{grid-template-columns:1fr;gap:6px}
-  .card,.card.w3{grid-column:span 6}
-}
+@media print{aside{position:static;height:auto}.topbar{display:none}}
 </style>
 </head>
 <body>
-<nav>
-  <div class="wrap">
-    <b>SH</b>
+<div class="layout">
+<aside>
+  <div class="photo"><img src="photo.jpg" alt="Shahdat Hossain" onerror="this.parentNode.textContent='SH'"></div>
+  <h1>Shahdat Hossain</h1>
+  <p class="role">Assistant Merchandiser</p>
+
+  <h2>Contact</h2>
+  <ul>
+    <li><a href="mailto:imsohag404@gmail.com">imsohag404@gmail.com</a></li>
+    <li><a href="tel:+8801844456644">+880-1844-456644</a></li>
+    <li><a href="https://linkedin.com/in/imshahdat404" target="_blank" rel="noopener">linkedin.com/in/imshahdat404</a></li>
+    <li>Gazipur, Bangladesh</li>
+  </ul>
+
+  <h2>Languages</h2>
+  <ul>
+    <li>Bangla <small>Native</small></li>
+    <li>English <small>Professional proficiency</small></li>
+    <li>Hindi <small>Intermediate</small></li>
+  </ul>
+
+  <h2>Technical skills</h2>
+  <ul>
+    <li>MS Excel, Word, PowerPoint</li>
+    <li>Merchandising Documentation</li>
+    <li>Cost Sheet Preparation</li>
+    <li>ERP / SAP (basic)</li>
+    <li>Web Design &amp; Development</li>
+    <li>Computer Networking</li>
+    <li>Database Management</li>
+  </ul>
+
+  <a class="dl" href="Shahdat-Hossain-CV.pdf" download>Download CV (PDF)</a>
+</aside>
+
+<main>
+  <nav class="topbar" aria-label="Sections">
+    <a href="#about">About</a>
     <a href="#experience">Experience</a>
     <a href="#buyers">Buyers</a>
     <a href="#skills">Skills</a>
     <a href="#education">Education</a>
-    <a class="cta" href="#contact">Contact</a>
-  </div>
-</nav>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<header class="hero">
-  <div class="wrap">
-    <div>
-      <p class="hi">Hello, I'm</p>
-      <h1>Shahdat Hossain</h1>
-      <h2>Assistant Merchandiser</h2>
-      <p class="lead">I take garment orders from costing to shipment for international buyers in the USA, Canada, Germany and the Netherlands. I work on both woven and knit products, and I keep buyers, vendors and factories moving in the same direction.</p>
-      <div class="btns">
-        <a class="btn" href="mailto:imsohag404@gmail.com">Email me</a>
-        <a class="btn ghost" href="Shahdat-Hossain-CV.pdf" download>Download CV</a>
-        <a class="btn ghost" href="https://linkedin.com/in/imshahdat404" target="_blank" rel="noopener">LinkedIn</a>
+  <section id="about">
+    <h2>Profile</h2>
+    <p class="lead">Results-driven Assistant Merchandiser with experience in garment merchandising, buyer communication, product costing, trims and accessories sourcing, order management, production follow-up and shipment coordination. I handle international buyers in the USA, Canada, Germany and the Netherlands, and manage both woven and knit apparel while ensuring quality compliance, on-time delivery and customer satisfaction. Backed by an IT background in systems and data.</p>
+    <div class="facts">
+      <div class="fact"><b>200,000+ pcs</b><span>monthly orders for Chapter One</span></div>
+      <div class="fact"><b>5 brands</b><span>ladies wear under one buyer</span></div>
+      <div class="fact"><b>4 countries</b><span>USA, Canada, Germany, Netherlands</span></div>
+      <div class="fact"><b>Woven &amp; Knit</b><span>product experience</span></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Work experience</h2>
+    <div class="job">
+      <time>Dec 2024 – Present</time>
+      <div>
+        <h3>Assistant Merchandiser</h3>
+        <p class="co">Infinity Outfit Limited</p>
+        <ul class="b">
+          <li>Communicate directly with clients for order management and approvals.</li>
+          <li>Prepare product costing and negotiate competitive pricing.</li>
+          <li>Source trims and raw materials from local and international vendors.</li>
+          <li>Manage booking processes and monitor production timelines.</li>
+          <li>Prepare packing lists and coordinate with logistics for shipment.</li>
+          <li>Work on both woven and knit products.</li>
+        </ul>
       </div>
     </div>
-    <div class="portrait">
-      <div class="ph"><img src="photo.jpg" alt="Shahdat Hossain" onerror="this.parentNode.textContent='SH'"></div>
-    </div>
-  </div>
-  <div class="wrap" style="display:block">
-    <div class="stats">
-      <div class="stat"><b>200,000+ pcs</b><span>handled every month for Chapter One</span></div>
-      <div class="stat"><b>5 brands</b><span>ladies wear under one buyer account</span></div>
-      <div class="stat"><b>4 countries</b><span>USA, Canada, Germany, Netherlands</span></div>
-      <div class="stat"><b>Woven + Knit</b><span>pants, shirts, hoodies, tees and more</span></div>
-    </div>
-  </div>
-</header>
-
-<section id="experience">
-  <div class="wrap">
-    <div class="sh"><h2>Experience</h2></div>
-    <div class="tl">
-      <div class="job now">
-        <time>Dec 2024 – Present</time>
-        <div>
-          <h3>Assistant Merchandiser</h3>
-          <p class="co">Infinity Outfit Limited</p>
-          <ul>
-            <li>Communicate directly with clients for order management and approvals.</li>
-            <li>Prepare product costing and negotiate competitive pricing.</li>
-            <li>Source trims and raw materials from local and international vendors.</li>
-            <li>Manage booking processes and monitor production timelines.</li>
-            <li>Prepare packing lists and coordinate with logistics for shipment.</li>
-            <li>Work on both woven and knit products.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="job">
-        <time>Jun 2022 – Nov 2024</time>
-        <div>
-          <h3>Junior Merchandiser</h3>
-          <ul>
-            <li>Assisted in buyer communication, order follow-up, and sample and bulk approvals.</li>
-            <li>Supported cost sheet preparation and trims and accessories booking.</li>
-            <li>Followed up with suppliers and factory teams to keep production on schedule.</li>
-            <li>Prepared merchandising documents and packing lists for shipments.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="job">
-        <time>Dec 2023 – May 2024</time>
-        <div>
-          <h3>Merchandiser Intern</h3>
-          <ul>
-            <li>Learned the end-to-end merchandising process, from order receipt to shipment.</li>
-            <li>Assisted with documentation, file management, and data entry.</li>
-            <li>Supported sample development, trims sourcing, and buyer follow-up tasks.</li>
-          </ul>
-        </div>
+    <div class="job">
+      <time>Jun 2022 – Nov 2024</time>
+      <div>
+        <h3>Junior Merchandiser</h3>
+        <ul class="b">
+          <li>Assisted in buyer communication, order follow-up, and sample and bulk approvals.</li>
+          <li>Supported cost sheet preparation and trims and accessories booking.</li>
+          <li>Followed up with suppliers and factory teams to keep production on schedule.</li>
+          <li>Prepared merchandising documents and packing lists for shipments.</li>
+        </ul>
       </div>
     </div>
-    <div class="box" style="margin-top:18px">
-      <h3>Key achievements</h3>
-      <ul>
-        <li>Successfully managed multiple buyer accounts and order follow-ups.</li>
-        <li>Handled 200,000+ pcs of garment orders per month for Chapter One across 5 ladies wear brands.</li>
-        <li>Coordinated trims and accessories bookings to support on-time production.</li>
-        <li>Kept communication clear between buyers, suppliers, and factory teams.</li>
-        <li>Supported timely shipments through accurate documentation and planning.</li>
-      </ul>
+    <div class="job">
+      <time>Dec 2023 – May 2024</time>
+      <div>
+        <h3>Merchandiser Intern</h3>
+        <ul class="b">
+          <li>Learned the end-to-end merchandising process, from order receipt to shipment.</li>
+          <li>Assisted with documentation, file management, and data entry.</li>
+          <li>Supported sample development, trims sourcing, and buyer follow-up tasks.</li>
+        </ul>
+      </div>
     </div>
-  </div>
-</section>
+    <h3 class="sub">Key achievements</h3>
+    <ul class="b">
+      <li>Successfully managed multiple buyer accounts and order follow-ups.</li>
+      <li>Handled 200,000+ pcs of garment orders per month for Chapter One across 5 ladies wear brands.</li>
+      <li>Coordinated trims and accessories bookings to support on-time production.</li>
+      <li>Kept communication clear between buyers, suppliers, and factory teams.</li>
+      <li>Supported timely shipments through accurate documentation and planning.</li>
+    </ul>
+  </section>
 
-<section id="buyers">
-  <div class="wrap">
-    <div class="sh"><h2>Buyers</h2></div>
-    <div class="bento">
-      <article class="card w6">
-        <h3>Chapter One Sportswear Inc.</h3>
-        <p class="where">USA &amp; Canada</p>
-        <p><span class="k">Products:</span> Ladies Chino Pants, Bootcut Pants, Trousers</p>
-        <p><span class="k">Brands:</span> Jules Leopold, Haver+Blair, MEG MARGOT, AUTRES FILLES, RYANN'S CLOSET, C by One</p>
-        <p>200,000+ pcs monthly bulk orders: trims booking, costing, on-time shipment, complete order follow-up and file management.</p>
-      </article>
-      <article class="card w3">
-        <h3>ETP</h3>
-        <p class="where">Uniform buyer, Netherlands</p>
-        <p><span class="k">Products:</span> Brussels Airlines Uniform Shirts, TUI Airline Pilot Shirts, TUI Airline Cabin Crew Shirts, Aprons, Chino Pants, Cargo Pants</p>
-        <p>Uniform order approval, trims booking and production follow-up.</p>
-      </article>
-      <article class="card w3">
-        <h3>Amazon</h3>
-        <p class="where">Hohenhorn brand</p>
-        <p><span class="k">Products:</span> Hoodies, Joggers, Boxers, T-Shirts, Polo Shirts (knit); Swim Shorts</p>
-        <p>Costing, booking, packing list and shipment documentation.</p>
-      </article>
-      <article class="card w3">
-        <h3>FUSSL</h3>
-        <p class="where">Germany</p>
-        <p><span class="k">Products:</span> Shorts, Chino Pants, Cargo Shorts, Shirts</p>
-        <p>Order follow-up, costing, trims sourcing and shipment coordination.</p>
-      </article>
-      <article class="card w3">
-        <h3>COLOURS &amp; SONS</h3>
-        <p class="where">Buyer</p>
-        <p><span class="k">Products:</span> Shorts, Chino Pants, Shirts</p>
-        <p>Buyer communication, sample and bulk order follow-up, delivery coordination.</p>
-      </article>
+  <section id="buyers">
+    <h2>Buyer-wise experience</h2>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>Buyer</th><th>Products</th><th>Responsibilities</th></tr></thead>
+      <tbody>
+        <tr><td>Chapter One Sportswear Inc.<small>USA &amp; Canada</small></td>
+          <td>Ladies Chino Pants, Bootcut Pants, Trousers.<br>Brands: Jules Leopold, Haver+Blair, MEG MARGOT, AUTRES FILLES, RYANN'S CLOSET, C by One</td>
+          <td>200,000+ pcs monthly bulk orders: trims booking, costing, on-time shipment, complete order follow-up and file management.</td></tr>
+        <tr><td>FUSSL<small>Germany</small></td>
+          <td>Shorts, Chino Pants, Cargo Shorts, Shirts</td>
+          <td>Order follow-up, costing, trims sourcing and shipment coordination.</td></tr>
+        <tr><td>ETP<small>Uniform buyer, Netherlands</small></td>
+          <td>Brussels Airlines Uniform Shirts, TUI Airline Pilot Shirts, TUI Airline Cabin Crew Shirts, Aprons, Chino Pants, Cargo Pants</td>
+          <td>Uniform order approval, trims booking and production follow-up.</td></tr>
+        <tr><td>Amazon<small>Hohenhorn brand</small></td>
+          <td>Hoodies, Joggers, Boxers, T-Shirts, Polo Shirts (knit); Swim Shorts</td>
+          <td>Costing, booking, packing list and shipment documentation.</td></tr>
+        <tr><td>COLOURS &amp; SONS</td>
+          <td>Shorts, Chino Pants, Shirts</td>
+          <td>Buyer communication, sample and bulk order follow-up, delivery coordination.</td></tr>
+      </tbody>
+    </table>
     </div>
-    <div class="cols" style="margin-top:16px">
-      <div class="box"><h3>Woven products</h3>
-        <ul class="chips"><li>Men's Cargo Pants</li><li>Shorts</li><li>Swim Shorts</li><li>Chino Pants</li><li>Shirts</li><li>Airline Uniform Shirts</li><li>Ladies Chino</li><li>Bootcut Pants</li><li>Ladies Cargo Trousers</li><li>Aprons</li></ul></div>
-      <div class="box"><h3>Knit products</h3>
-        <ul class="chips"><li>Tracksuits</li><li>Joggers</li><li>Hoodies</li><li>Polo Shirts</li><li>Boxers</li><li>T-Shirts</li></ul></div>
+    <div class="cols" style="margin-top:26px">
+      <div><h3 class="sub">Woven products</h3>
+        <ul class="tags"><li>Men's Cargo Pants</li><li>Shorts</li><li>Swim Shorts</li><li>Chino Pants</li><li>Shirts</li><li>Airline Uniform Shirts</li><li>Ladies Chino</li><li>Bootcut Pants</li><li>Ladies Cargo Trousers</li><li>Aprons</li></ul></div>
+      <div><h3 class="sub">Knit products</h3>
+        <ul class="tags"><li>Tracksuits</li><li>Joggers</li><li>Hoodies</li><li>Polo Shirts</li><li>Boxers</li><li>T-Shirts</li></ul></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="skills">
-  <div class="wrap">
-    <div class="sh"><h2>Skills</h2></div>
+  <section id="skills">
+    <h2>Skills &amp; process knowledge</h2>
     <div class="cols">
-      <div class="box"><h3>Core competencies</h3>
-        <ul class="chips"><li>Garment Merchandising</li><li>Buyer Communication</li><li>Product Costing</li><li>Price Negotiation</li><li>Trims &amp; Accessories Sourcing</li><li>Vendor Management</li><li>Booking Management</li><li>Order Follow-up</li><li>Production Planning</li><li>Shipment Coordination</li><li>Packing List Preparation</li><li>Supply Chain Coordination</li><li>Documentation &amp; Reporting</li><li>Quality Compliance</li></ul></div>
-      <div class="box"><h3>Process knowledge</h3>
-        <ul class="chips"><li>Tech Pack</li><li>Bill of Materials (BOM)</li><li>Costing / CM, FOB</li><li>Purchase Order (PO)</li><li>Time &amp; Action Calendar (TNA)</li><li>Pre-Production (PP) Meeting</li><li>Sample Development &amp; Approval</li><li>Trims Booking</li><li>Inspection Coordination</li><li>Packing List</li><li>Shipping Documents</li></ul></div>
+      <div><h3 class="sub">Core competencies</h3>
+        <ul class="tags"><li>Garment Merchandising</li><li>Buyer Communication</li><li>Product Costing</li><li>Price Negotiation</li><li>Trims &amp; Accessories Sourcing</li><li>Vendor Management</li><li>Booking Management</li><li>Order Follow-up</li><li>Production Planning</li><li>Shipment Coordination</li><li>Packing List Preparation</li><li>Supply Chain Coordination</li><li>Documentation &amp; Reporting</li><li>Quality Compliance</li></ul></div>
+      <div><h3 class="sub">Process knowledge</h3>
+        <ul class="tags"><li>Tech Pack</li><li>Bill of Materials (BOM)</li><li>Costing / CM, FOB</li><li>Purchase Order (PO)</li><li>Time &amp; Action Calendar (TNA)</li><li>Pre-Production (PP) Meeting</li><li>Sample Development &amp; Approval</li><li>Trims Booking</li><li>Inspection Coordination</li><li>Packing List</li><li>Shipping Documents</li></ul></div>
     </div>
-    <div class="box" style="margin-top:16px"><h3>Technical skills</h3>
-      <ul class="chips"><li>MS Excel, Word, PowerPoint</li><li>Merchandising Documentation</li><li>Cost Sheet Preparation</li><li>ERP / SAP (basic)</li><li>Web Design &amp; Development</li><li>Computer Networking</li><li>Database Management</li></ul></div>
-  </div>
-</section>
+  </section>
 
-<section id="education">
-  <div class="wrap">
-    <div class="sh"><h2>Education</h2></div>
+  <section id="education">
+    <h2>Education &amp; career objective</h2>
     <div class="cols">
-      <div class="box">
+      <div>
         <div class="edu"><b>Diploma in Business Information &amp; Technology</b><span>NCC Education (UK), 2015 – 2020</span></div>
         <div class="edu"><b>Higher Secondary Certificate (HSC)</b><span>Milestone School and College, 2013 – 2015</span></div>
         <div class="edu"><b>Secondary School Certificate (SSC)</b><span>Kamarjuri Yousuf Ali High School, 2009 – 2013</span></div>
       </div>
-      <div class="box">
-        <h3>Career objective</h3>
+      <div>
+        <h3 class="sub">Career objective</h3>
         <p>To grow as a merchandiser in a reputed garment company by applying my buyer handling, costing and sourcing experience, while contributing to on-time delivery and long-term buyer relationships.</p>
-        <h3 style="margin-top:22px">Languages</h3>
-        <ul class="chips"><li>Bangla (Native)</li><li>English (Professional)</li><li>Hindi (Intermediate)</li></ul>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer id="contact">
-  <div class="wrap">
-    <h2>Let's work together</h2>
-    <p>I am open to merchandising roles in reputed garment companies. Email is the quickest way to reach me.</p>
-    <div class="btns">
-      <a class="btn" href="mailto:imsohag404@gmail.com">imsohag404@gmail.com</a>
-      <a class="btn ghost" href="tel:+8801844456644">+880-1844-456644</a>
-      <a class="btn ghost" href="https://linkedin.com/in/imshahdat404" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-    <small>© <span id="y"></span> Shahdat Hossain. Gazipur, Bangladesh.</small>
+  <div class="contact" id="contact">
+    <h2>Get in touch</h2>
+    <p>I am open to merchandising roles in reputed garment companies. Write to <a href="mailto:imsohag404@gmail.com">imsohag404@gmail.com</a> or connect on <a href="https://linkedin.com/in/imshahdat404" target="_blank" rel="noopener">LinkedIn</a>.</p>
   </div>
-</footer>
+  <footer>© <span id="y"></span> Shahdat Hossain. Gazipur, Bangladesh.</footer>
+</main>
+</div>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
